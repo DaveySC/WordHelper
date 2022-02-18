@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="764.0" stylesheets="@test-view.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lehska.newwordhelper.ui.testwindow.TestController">
+   <children>
+      <GridPane prefHeight="546.0" prefWidth="764.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="10.0" prefWidth="141.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="646.0" minWidth="10.0" prefWidth="623.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="479.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox prefHeight="336.0" prefWidth="97.0" style="-fx-background-color: #FFFFFF;" styleClass="panes" GridPane.rowIndex="1">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="200.0" styleClass="buttonsVBox" text="Тест">
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/test.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#openWordsView" prefHeight="70.0" prefWidth="200.0" styleClass="buttonsVBox" text="Словарь">
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/dictionary.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#openCalendarView" prefHeight="70.0" prefWidth="200.0" styleClass="buttonsVBox" text="Календарь">
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/calendar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="200.0" styleClass="buttonsVBox" text="Настройки">
+                     <VBox.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane prefHeight="244.0" prefWidth="141.0" />
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F5F4F6;" styleClass="panes" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="427.0" prefWidth="574.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane prefHeight="137.0" prefWidth="615.0" />
+                        <Label id="centerLabel" fx:id="centerLabel" alignment="CENTER" prefHeight="44.0" prefWidth="209.0" styleClass="thing" stylesheets="@test-view.css" text="Wanna start?" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="centerTextField" alignment="CENTER" prefHeight="23.0" prefWidth="234.0" promptText="enter yes if you want to start" style="-fx-pref-width: 10;" styleClass="textThings">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="100.0" right="100.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button id="buttonInCenter" mnemonicParsing="false" onAction="#answerAction" prefHeight="35.0" prefWidth="137.0" styleClass="buttonsVBox" text="Ответить">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Pane prefHeight="74.0" prefWidth="615.0" />
+                        <TableView fx:id="tableView" prefHeight="188.0" prefWidth="615.0">
+                           <columns>
+                              <TableColumn fx:id="resultColumn" prefWidth="103.0" text="Результат" />
+                              <TableColumn fx:id="wordColumn" prefWidth="90.0" text="Слово" />
+                              <TableColumn fx:id="answerColumn" minWidth="0.0" prefWidth="167.0" text="Перевод" />
+                              <TableColumn fx:id="rightAnswerColumn" prefWidth="114.0" text="Правильный перевод" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #01AEFE;">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-r-100.png" />
+                     </image>
+                  </ImageView>
+                  <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Word Helper" wrappingWidth="82.630859375">
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="84.0" prefWidth="0.0" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1">
+               <children>
+                  <Pane prefHeight="81.0" prefWidth="494.0" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="81.0" prefWidth="225.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/notification.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="41.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/anxiety.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <MenuButton fx:id="comboVomboID" maxWidth="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="comboVombo" text="H">
+                          <items>
+                            <MenuItem fx:id="menuItem1" mnemonicParsing="false">
+                                 <graphic>
+                                    <Label fx:id="labelInMenuItem1" minWidth="75.0" text="edit" />
+                                 </graphic>
+                              </MenuItem>
+                            <MenuItem fx:id="menuItem1" mnemonicParsing="false">
+                                 <graphic>
+                                    <Label fx:id="labelInMenuItem2" text="log out" />
+                                 </graphic>
+                              </MenuItem>
+                          </items>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</Pane>

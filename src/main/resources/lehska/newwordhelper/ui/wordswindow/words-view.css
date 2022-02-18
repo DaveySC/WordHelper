@@ -1,0 +1,73 @@
+.buttonsVBox{
+    -fx-font-family: Courier New;
+    -fx-font-weight: bold;
+    -fx-fill: #485460;
+    -fx-background-color: white;
+}
+.buttonsVBox:hover{
+
+    -fx-background-color: #3FDAEA;
+}
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+
+#buttonInCenter{
+    -fx-background-color: #00bfff;
+}
+
+#buttonInCenter:hover{
+    -fx-background-color: #3FDAEA;
+}
+
+
+.table-view .column-header {
+    -fx-background-color: #00bfff;
+}
+
+
+
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view{
+    -fx-font-family: Courier New;
+}
+
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+
+
+
+
+.textInCenter{
+    -fx-font-family: Courier New;
+    -fx-font-weight: bold;
+    -fx-fill: #485460;
+    -fx-background-color: white;
+}
+
+
+
+
+
+
+
+/*00a86b*/
